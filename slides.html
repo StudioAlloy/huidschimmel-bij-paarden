@@ -6,7 +6,7 @@ permalink: slides
 <div id="fullpage">
 	<div class="section">
 		{% for i in (1..page.slides) %}
-		<div class="slide"> <img src="img/{{ i }}.jpeg" alt="" /> </div>
+		<div class="slide"> <img src="{{ site.baseurl }}/img/{{ i }}.jpeg" alt="" /> </div>
 		{% endfor %}
 	</div>
 </div>
