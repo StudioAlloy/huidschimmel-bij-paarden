@@ -5,9 +5,12 @@ permalink: slides
 ---
 <div id="fullpage">
 	<div class="section">
-		<a href="{{ site.baseurl }}/" class="alloy-fixed">Start opnieuw</a>
 		{% for i in (1..page.slides) %}
-		<div class="slide"> <img src="{{ site.baseurl }}/img/{{ i }}.jpeg" alt="" /> </div>
+			{% if forloop.last == true %}
+			<div class="slide"> <img src="{{ site.baseurl }}/img/{{ i }}.jpeg" alt="" /> <a href="{{ site.baseurl }}/" class="alloy-fixed">Start opnieuw</a></div>
+			{% else %}
+			<div class="slide"> <img src="{{ site.baseurl }}/img/{{ i }}.jpeg" alt="" /> </div>
+			{% endif %}
 		{% endfor %}
 	</div>
 </div>
